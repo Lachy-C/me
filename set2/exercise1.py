@@ -39,6 +39,7 @@ def usefulFunction():
     https://docs.python.org/3/library/platform.html#platform.uname
     """
     print(platform.uname())
+    
 
 
 usefulFunction()
