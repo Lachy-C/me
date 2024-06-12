@@ -10,6 +10,7 @@ python ../course/set2/tests.py
 In each function, where you see:
 
     the_answer = None
+    
 
 replace None with the actual answer.
 
