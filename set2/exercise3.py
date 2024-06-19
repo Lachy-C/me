@@ -8,24 +8,16 @@ Modify each function until the tests pass.
 
 
 def is_odd(a_number):
-    """Return True if a_number is odd, and False if a_number is even.
+        return a_number % 2 != 0
 
-    Look into modulo division using the '%' operator as one way of doing this.
 
-    e.g. 4 % 2 = 0
-        13 %12 = 1
-         3 % 2 = 1
-
-    So if a_number modulo two is zero, then it's even.
-    """
-    return True
 
 
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
 
     Using the engineering flowchart (in week2 folder of the CODE1161-2019
-    repo engineeringFlowchart.png) for the rules, return the apropriate
+    repo engineeringFlowchart.png) for the rules, return the appropriate
     response to the input parameters.
     Use conditional statements: if, else, elif etc.
     This function should return either:
@@ -36,8 +28,12 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return False
-
+if moves == should_move:
+        return "No Problem"
+    elif moves:
+        return "Duct Tape"
+    else:
+        return "WD-40"
 
 def loops_preview():
     """Make 8 poops.
@@ -56,10 +52,13 @@ def loops_1a():
     """Make 10 stars.
 
     Using a for loop
-    return a list of 10 items, each one a string with exacly one star in it.
+    return a list of 10 items, each one a string with exactly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    star_list = []
+    for i in range(10):
+        star_list.append("*")
+    return star_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -72,7 +71,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
+    return [symbol for _ in range(number_of_items)]
 
 
 def loops_2_preview():
